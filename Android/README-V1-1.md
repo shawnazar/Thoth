@@ -6,4 +6,6 @@ This version will will furthur our advance into the camera. Now that we can take
 -Camera Class<br/>
 ** Camera Class will have all the actions used to access, control, and manipulate camera<br/>
 -Camera Preview Class<br/>
-** Cmaera Preview Class will allow us the preview the images taken from the camera.<br/>
+** Camera Preview Class will allow us the preview the images taken from the camera.<br/>
+-Storage<br/>
+** Store images
