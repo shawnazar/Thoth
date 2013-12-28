@@ -5,19 +5,17 @@ import android.provider.MediaStore;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
+import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends Activity {
 
 	static final int REQUEST_IMAGE_CAPTURE = 1;
 
-	private void dispatchTakePictureIntent() {
-	    Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-	    if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
-	        startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
-	    }
-	}
 	
 	/*****************************************************************
+	 *  MAIN
+	 *****************************************************************
 	 * 	On Create
 	 *****************************************************************
 	 *	The on create method is the equivalent of main
@@ -28,10 +26,22 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
-        dispatchTakePictureIntent();
+        // Viewport object Creation
+        final Button button = (Button) findViewById(R.id.CaptureButton);
+        
+        button.setOnClickListener(new View.OnClickListener() 
+        {
+            public void onClick(View v) 
+            {
+            	captureImageIntent();
+            }
+        });
+        
     }
 
 	/*****************************************************************
+	 * MENU OPTIONS
+	 **
 	 * 	On Create Options Menu
 	 *****************************************************************
 	 *	The on Create options menu creates the menu options for  the user
@@ -44,4 +54,18 @@ public class MainActivity extends Activity {
         return true;
     }
     
+    
+	/*****************************************************************
+	 * 	Capture Image Intent
+	 *****************************************************************
+	 *	Captures an image
+	 *****************************************************************/
+	private void captureImageIntent() 
+	{
+	    Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+	    if (takePictureIntent.resolveActivity(getPackageManager()) != null) 
+	    {
+	        startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
+	    }
+	}
 }
