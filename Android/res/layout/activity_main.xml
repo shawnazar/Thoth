@@ -12,16 +12,33 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome to Thoth. This application is underconstruction." />
+        android:text="Welcome to Thoth, This project is underconstruction" />
 
     <Button
-        android:id="@+id/CaptureButton"
+        android:id="@+id/captureButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView1"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="21dp"
-        android:layout_marginLeft="84dp"
+        android:layout_marginBottom="26dp"
         android:text="Capture" />
+
+    <Button
+        android:id="@+id/previewButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/captureButton"
+        android:layout_alignBottom="@+id/captureButton"
+        android:layout_alignRight="@+id/textView1"
+        android:text="Preview" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="31dp"
+        android:src="@drawable/ic_launcher" />
 
 </RelativeLayout>
