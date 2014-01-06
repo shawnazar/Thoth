@@ -31,9 +31,8 @@ public class MainActivity extends Activity
 		 capture.setOnClickListener(new View.OnClickListener() {
              public void onClick(View v) {
             	
-            	
+            	image.capture();
          	    startActivityForResult(image.getIntent(), 1);
-         	    
              }
                  
          });

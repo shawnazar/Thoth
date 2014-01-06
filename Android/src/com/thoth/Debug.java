@@ -7,7 +7,7 @@ public class Debug
 	
 	/* <b>Debug Information</b> */
 	// Output Logcat debug statments
-	public static final boolean DEBUG_STATUS = true;
+	public static final boolean DEBUG_STATUS = true;//false;
 	
 	// Tag for LogCat
 	public static final String DEBUG_TAG = "Thoth_Debug";
