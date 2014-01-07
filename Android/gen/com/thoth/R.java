@@ -21,17 +21,32 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
+        public static final int dummy_logo=0x7f020000;
+        public static final int ic_launcher=0x7f020001;
     }
     public static final class id {
-        public static final int action_settings=0x7f080004;
+        public static final int action_settings=0x7f08000e;
+        public static final int btnLogin=0x7f080005;
+        public static final int btnRegister=0x7f08000a;
         public static final int captureButton=0x7f080001;
+        public static final int header=0x7f080004;
         public static final int imageView=0x7f080003;
+        public static final int imageView1=0x7f08000d;
+        public static final int link_to_login=0x7f08000b;
+        public static final int link_to_register=0x7f080006;
         public static final int previewButton=0x7f080002;
+        public static final int progressBar1=0x7f08000c;
+        public static final int reg_email=0x7f080008;
+        public static final int reg_fullname=0x7f080007;
+        public static final int reg_password=0x7f080009;
         public static final int textView1=0x7f080000;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
+        public static final int header_gradient=0x7f030001;
+        public static final int login=0x7f030002;
+        public static final int register=0x7f030003;
+        public static final int splashscrn=0x7f030004;
     }
     public static final class menu {
         public static final int main=0x7f070000;
