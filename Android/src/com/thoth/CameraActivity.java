@@ -15,7 +15,6 @@ import android.widget.Toast;
 import com.thoth.Debug;
 import com.thoth.Thoth;
 
-
 public class CameraActivity 
 {
 	public static final int MEDIA_TYPE_IMAGE = 1;

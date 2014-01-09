@@ -4,8 +4,13 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
  
+/* LoginActivity 
+ * 
+ *  This class will execute the login page for the program.
+ *  It handles connections to: reigster, mainpage.*/
 public class LoginActivity extends Activity 
 {
     @Override
@@ -16,17 +21,33 @@ public class LoginActivity extends Activity
         setContentView(R.layout.login);
  
         TextView registerScreen = (TextView) findViewById(R.id.link_to_register);
+        Button mainScreen = (Button) findViewById(R.id.btnLogin);
  
-        // Listening to register new account link
+        /* On click register event.
+         * Executes register activity for a new user. */
         registerScreen.setOnClickListener(new View.OnClickListener() 
         {
  
             public void onClick(View v) 
             {
-                // Switching to Register screen
-                Intent i = new Intent(getApplicationContext(), RegisterActivity.class);
-                startActivity(i);
+                // Intent for the register page is created here for on_click event.
+                Intent regPage = new Intent(getApplicationContext(), RegisterActivity.class);
+                startActivity(regPage);
             }
-        });
-    }
+        });//registerScreen - END
+        
+        /* On click login event.
+         * Executes login activity for user. */
+        mainScreen.setOnClickListener(new View.OnClickListener() 
+        {
+ 
+            public void onClick(View v) 
+            {
+                // Switching to Register screen
+                Intent mainPg = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(mainPg);
+            }
+        });//mainScreen - END
+        
+    }// onCreate - End
 }
