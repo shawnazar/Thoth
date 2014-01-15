@@ -7,7 +7,7 @@ public class Debug
 	
 	/* <b>Debug Information</b> */
 	// Output Logcat debug statments
-	public static final boolean DEBUG_STATUS = true;//false;
+	public static final boolean DEBUG_STATUS = true;
 	
 	// Tag for LogCat
 	public static final String DEBUG_TAG = "Thoth_Debug";
@@ -21,7 +21,8 @@ public class Debug
 	{
 		if(DEBUG_STATUS == true)
 		{
-			Log.e(DEBUG_TAG, errorString);
+			Log.e(DEBUG_TAG, DEBUG_TAG + " *START|- " + errorString + " -|END*");
 		}
 	}
+	
 }

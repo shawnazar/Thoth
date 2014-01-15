@@ -4,80 +4,58 @@ import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
-import android.widget.Toast;
 
 // Headers
 import com.thoth.Debug;
 import com.thoth.Thoth;
 
-
 public class CameraActivity 
 {
+	// Camera Intent Number - Used for imaging type
 	public static final int MEDIA_TYPE_IMAGE = 1;
+	// Create image capture intent
 	public Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+	// file location URI
 	private Uri fileUri;
 	
+	// Default Constructor
 	public CameraActivity()
 	{
-		Debug.LogCatE("Constructor - Camera Activity");
-	    
-		fileUri = getFileURIFromFile();
-	    
-	    Debug.LogCatE("FileURI set. FileURI toString: " + fileUri.toString());
-	}
-	
-	public void capture()
-	{
-		Debug.LogCatE("Method - capture");
+		Debug.LogCatE("Start Camera Activity Default Constructor");
 		
-		intent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri);
-		
-		Debug.LogCatE("Intent Created with extra option of uri. Intent toString: " + intent.toString());
-	}
-	
-	public Uri getFileURI()
-	{
-		Debug.LogCatE("Method - getFileURI");
-		Debug.LogCatE("fileURI toString:  " + fileUri.toString());
-		return fileUri;
-	}
-	
-	public Intent getIntent()
-	{
-		Debug.LogCatE("Method - getIntent");
-		Debug.LogCatE("intent toString:  " + intent.toString());
-		return intent;
-	}
-	
-	
-	public static Uri getFileURIFromFile()
-	{
-		Debug.LogCatE("Method - getFileURIFromFile");
-		Debug.LogCatE("This method Calls getOutputMediaFile() before it returns." +
-					  "getOutputMediaFile() toString: " + getOutputMediaFile().toString());
-		return Uri.fromFile(getOutputMediaFile());
+		// Create the location of the file that will store the image
+	    fileUri = getFileURI();
+	    Debug.LogCatE("fileURI, toString - " + fileUri.toString());
+	    
+	    // Let the intent know of the location createad for the image
+	    intent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri);
+	    Debug.LogCatE("intent, toString - " + intent.toString());
+	    
+	    Debug.LogCatE("End Camera Activity Default Constructor");
 	}
 
-	/** Create a File for saving an image or video */
+	// Camera Activity Methods
 	public static File getOutputMediaFile()
 	{
-		Debug.LogCatE("Method - getOutputMediaFile()");
-
+		Debug.LogCatE("Start getOutputMediaFile Method");
 		File mediaFile = null;
 		
-		// If the device uses an SDcard
-		if(isSDPresent())
+		boolean statusSD = isSDPresent();
+		Debug.LogCatE("statusSD, toString - " + statusSD);
+		
+		// This section will change significantly
+		// If an SD card is present choose sdcard
+		if(statusSD)
 		{
-			// Create the varaiable that will store the file.
 			File mediaStorageDir = new File(Environment.getExternalStoragePublicDirectory(
 		              Environment.DIRECTORY_PICTURES), Thoth.ALBUM_TITLE);
+			
+		    Debug.LogCatE("mediaStorageDir, toString - " + mediaStorageDir.toString());
 		    
-			// Make Try Catch
 		    // Create the storage directory if it does not exist
 		    if (! mediaStorageDir.exists())
 		    {
@@ -87,37 +65,54 @@ public class CameraActivity
 		        	return null;
 		        }
 		    }
+
+		   // Create a media file name
+		   String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+		   Debug.LogCatE("timeStamp, toString - " + timeStamp.toString());
 		    
-		    // Create a media file name time stamp
-		    String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-		    String fileName  = mediaStorageDir.getPath() + File.separator +
-			        "THOTH_IMG_" + timeStamp + ".png";
-		    
-		    // store the file.
-	        mediaFile = new File(fileName);
+	       mediaFile = new File(mediaStorageDir.getPath() + File.separator +
+	       "THOTH_IMG_"+ timeStamp + ".jpg");
+	       Debug.LogCatE("mediaFile, toString - " + mediaFile.toString());
 		        
 		}
 		else
 		{
 			// internal stroage
+			Debug.LogCatE("Internal Storage");
 		}
 		
+		Debug.LogCatE("mediaFile, toString before return - " + mediaFile.toString());
+		Debug.LogCatE("End getOutputMediaFile Method");
 		
 	    return mediaFile;
 	}
 	
 	public static boolean isSDPresent()
 	{
-		Debug.LogCatE("Method - IsSDPresent()");
+		Debug.LogCatE("Start isSDPresent Method");
 		boolean isPresent = false;
 		
 		if(Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED))
 		{
 			isPresent = true;
 		}
+		Debug.LogCatE("mediaFile, toString - " + isPresent);
 		
-		Debug.LogCatE("isSDPresent value: " + isPresent);
 		
+		Debug.LogCatE("End isSDPresent Method");
 		return isPresent;
+	}
+	
+	//Getters 
+	public Intent getIntent()
+	{
+		Debug.LogCatE("Getter Return, toString - " + intent.toString());
+		return intent;
+	}
+	
+	public static Uri getFileURI()
+	{
+		  Debug.LogCatE("Getter Uri.fromFile");
+	      return Uri.fromFile(getOutputMediaFile());
 	}
 }
