@@ -21,7 +21,7 @@ public class Debug
 	{
 		if(DEBUG_STATUS == true)
 		{
-			Log.e(DEBUG_TAG, DEBUG_TAG + " *START|- " + errorString + " -|END*");
+			Log.e(DEBUG_TAG, DEBUG_TAG + " *|- " + errorString + " -|*");
 		}
 	}
 	
