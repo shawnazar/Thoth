@@ -20,5 +20,5 @@
         android:divider="#ffffff"
         android:dividerHeight="1dp"       
         android:listSelector="@drawable/list_selector"
-        android:background="#ffffff"/>
+        android:background="#9e0b0f"/>
 </android.support.v4.widget.DrawerLayout>

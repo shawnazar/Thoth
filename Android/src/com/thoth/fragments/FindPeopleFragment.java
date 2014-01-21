@@ -3,6 +3,7 @@ package com.thoth.fragments;
 import com.thoth.R;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,7 +18,7 @@ public class FindPeopleFragment extends Fragment {
             Bundle savedInstanceState) {
  
         View rootView = inflater.inflate(R.layout.snap_shot, container, false);
-         
+        
         return rootView;
     }
 }

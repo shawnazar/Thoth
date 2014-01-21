@@ -5,6 +5,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
  
+/* MAIN STARTING SCREEN
+ * All the needed process will be done here at starting point.
+ * Check if there connection to the Internet, if there is no connection to the Internet
+ * Run error  message. */
 public class SplashScreen extends Activity 
 {
     // Splash screen timer

@@ -9,8 +9,11 @@ import android.widget.TextView;
  
 /* LoginActivity 
  * 
+ * 	+	This section will run if there is a Internet connection.
+ *  +	Or OFFLINE MODE.
+ *  
  *  This class will execute the login page for the program.
- *  It handles connections to: reigster, mainpage.*/
+ *  It handles connections to: register, main-page.*/
 public class LoginActivity extends Activity 
 {
     @Override
