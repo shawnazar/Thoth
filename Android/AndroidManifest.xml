@@ -16,6 +16,10 @@
          features that we need etc.</p>
     -->
 
+    <!-- Internet Permissions -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <!--
 	     <h2>Feature Access</h2>
