@@ -16,10 +16,6 @@
          features that we need etc.</p>
     -->
 
-    <!-- Internet Permissions -->
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <!--
 	     <h2>Feature Access</h2>
@@ -40,37 +36,15 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        
-        <!-- Splash Screen Start -->
-        <activity
-            android:name="com.thoth.SplashScreen"
-            android:label="@string/app_name" 
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Black.NoTitleBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        
-        <!-- LoginActivity -->
-        <activity
-            android:name="com.thoth.LoginActivity"
-            android:label="@string/app_name" >
-        </activity>
-        
-        <!-- LoginActivity -->
-        <activity
-            android:name="com.thoth.RegisterActivity"
-            android:label="@string/app_name" >
-        </activity>
-        
-        <!-- Main Activity Start -->
         <activity
             android:name="com.thoth.MainActivity"
             android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-        
     </application>
 
 </manifest>
