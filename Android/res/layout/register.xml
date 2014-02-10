@@ -14,7 +14,7 @@
             android:id="@+id/header"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:background="#9e0b0f"
+            android:background="#ff2400"
             android:gravity="center"
             android:paddingBottom="5dip"
             android:paddingTop="5dip" >
@@ -37,8 +37,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
             android:layout_below="@id/header"
-            android:background="#9e0b0f"
+            android:background="#ff2400"
             android:orientation="vertical"
             android:padding="10dip" >
 
@@ -56,7 +57,7 @@
               android:layout_height="wrap_content"
               android:layout_marginBottom="20dip"
               android:layout_marginTop="5dip"
-              android:background="#e42429"
+              android:background="#fd7963"
               android:singleLine="true" />
 
           <!--  Email Label -->
@@ -73,7 +74,7 @@
               android:layout_height="wrap_content"
               android:layout_marginBottom="20dip"
               android:layout_marginTop="5dip"
-              android:background="#e42429"
+              android:background="#fd7963"
               android:singleLine="true" />
 
           <!-- Password Label -->
@@ -89,7 +90,7 @@
               android:layout_width="fill_parent"
               android:layout_height="wrap_content"
               android:layout_marginTop="5dip"
-              android:background="#e42429"
+              android:background="#fd7963"
               android:password="true"
               android:singleLine="true" />
 
@@ -98,9 +99,9 @@
           <Button
               android:id="@+id/btnRegister"
               android:layout_width="fill_parent"
-              android:layout_height="wrap_content"
-              android:layout_marginTop="10dip"
-              android:background="@android:color/transparent"
+              android:layout_height="33dp"
+              android:layout_marginTop="10dp"
+              android:background = "@drawable/roundedbutton"
               android:text="Register New Account"
               android:textColor="#ffffff" />
 
@@ -110,12 +111,12 @@
               android:id="@+id/link_to_login"
               android:layout_width="fill_parent"
               android:layout_height="wrap_content"
-              android:layout_marginBottom="40dip"
-              android:layout_marginTop="40dip"
+              android:layout_marginBottom="05dp"
+              android:layout_marginTop="05dp"
               android:gravity="center"
               android:text="Already have a account?"
-              android:textColor="#00f3ea"
-              android:textSize="20dip" />
+              android:textColor="#ffffff"
+              android:textSize="13sp" />
  
         </LinearLayout>
         <!-- Registration Form Ends -->

@@ -33,57 +33,70 @@ public final class R {
         public static final int add_img_to_lib=0x7f020000;
         public static final int counter_bg=0x7f020001;
         public static final int dummy_logo=0x7f020002;
-        public static final int ic_communities=0x7f020003;
-        public static final int ic_drawer=0x7f020004;
-        public static final int ic_help=0x7f020005;
-        public static final int ic_home=0x7f020006;
-        public static final int ic_launcher=0x7f020007;
-        public static final int ic_pages=0x7f020008;
-        public static final int ic_people=0x7f020009;
-        public static final int ic_photos=0x7f02000a;
-        public static final int ic_whats_hot=0x7f02000b;
-        public static final int list_item_bg_normal=0x7f02000c;
-        public static final int list_item_bg_pressed=0x7f02000d;
-        public static final int list_selector=0x7f02000e;
-        public static final int take_snapshot=0x7f02000f;
+        public static final int ic_action_camera=0x7f020003;
+        public static final int ic_action_email=0x7f020004;
+        public static final int ic_action_help=0x7f020005;
+        public static final int ic_action_photo=0x7f020006;
+        public static final int ic_action_photoalbum=0x7f020007;
+        public static final int ic_action_user=0x7f020008;
+        public static final int ic_communities=0x7f020009;
+        public static final int ic_drawer=0x7f02000a;
+        public static final int ic_help=0x7f02000b;
+        public static final int ic_home=0x7f02000c;
+        public static final int ic_launcher=0x7f02000d;
+        public static final int ic_pages=0x7f02000e;
+        public static final int ic_people=0x7f02000f;
+        public static final int ic_photos=0x7f020010;
+        public static final int ic_whats_hot=0x7f020011;
+        public static final int list_item_bg_normal=0x7f020012;
+        public static final int list_item_bg_pressed=0x7f020013;
+        public static final int list_selector=0x7f020014;
+        public static final int roundedbutton=0x7f020015;
+        public static final int take_snapshot=0x7f020016;
     }
     public static final class id {
-        public static final int action_settings=0x7f090014;
-        public static final int btnLogin=0x7f090008;
-        public static final int btnRegister=0x7f09000e;
-        public static final int captureButton=0x7f090010;
+        public static final int action_settings=0x7f090018;
+        public static final int btnLogin=0x7f09000d;
+        public static final int btnRegister=0x7f090012;
+        public static final int captureButton=0x7f090014;
         public static final int counter=0x7f090005;
         public static final int drawer_layout=0x7f090000;
         public static final int frame_container=0x7f090001;
-        public static final int header=0x7f090007;
+        public static final int header=0x7f09000b;
         public static final int icon=0x7f090003;
-        public static final int imageView=0x7f090011;
-        public static final int imageView1=0x7f090013;
-        public static final int link_to_login=0x7f09000f;
-        public static final int link_to_register=0x7f09000a;
+        public static final int imageView=0x7f090016;
+        public static final int imageView1=0x7f09000c;
+        public static final int imageView2=0x7f090006;
+        public static final int link_to_login=0x7f090013;
+        public static final int link_to_register=0x7f09000e;
         public static final int list_slidermenu=0x7f090002;
-        public static final int progressBar1=0x7f090012;
-        public static final int reg_email=0x7f09000c;
-        public static final int reg_fullname=0x7f09000b;
-        public static final int reg_password=0x7f09000d;
-        public static final int textView1=0x7f090009;
+        public static final int pager=0x7f090017;
+        public static final int previewButton=0x7f090015;
+        public static final int progressBar1=0x7f090007;
+        public static final int reg_email=0x7f090010;
+        public static final int reg_fullname=0x7f09000f;
+        public static final int reg_password=0x7f090011;
+        public static final int textView1=0x7f090008;
+        public static final int textView2=0x7f09000a;
         public static final int title=0x7f090004;
-        public static final int txtLabel=0x7f090006;
+        public static final int txtLabel=0x7f090009;
+        public static final int viewpager=0x01010000;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
         public static final int drawer_list_item=0x7f030001;
-        public static final int fragment_community=0x7f030002;
-        public static final int fragment_find_people=0x7f030003;
-        public static final int fragment_home=0x7f030004;
-        public static final int fragment_pages=0x7f030005;
-        public static final int fragment_photos=0x7f030006;
-        public static final int fragment_whats_hot=0x7f030007;
-        public static final int header_gradient=0x7f030008;
-        public static final int login=0x7f030009;
-        public static final int register=0x7f03000a;
-        public static final int snap_shot=0x7f03000b;
-        public static final int splashscrn=0x7f03000c;
+        public static final int exit_app=0x7f030002;
+        public static final int fragment_home=0x7f030003;
+        public static final int fragment_photos=0x7f030004;
+        public static final int header_gradient=0x7f030005;
+        public static final int help_tab1=0x7f030006;
+        public static final int help_tab2=0x7f030007;
+        public static final int login=0x7f030008;
+        public static final int register=0x7f030009;
+        public static final int snap_shot=0x7f03000a;
+        public static final int splashscrn=0x7f03000b;
+        public static final int viewpager_layout=0x7f03000c;
+        public static final int viewpagr=0x7f03000d;
     }
     public static final class menu {
         public static final int main=0x7f080000;
@@ -91,12 +104,8 @@ public final class R {
     public static final class string {
         public static final int action_settings=0x7f050001;
         public static final int app_name=0x7f050000;
-        /**  Content Description 
-         */
-        public static final int desc_list_item_icon=0x7f050005;
-        public static final int drawer_close=0x7f050004;
-        public static final int drawer_open=0x7f050003;
-        public static final int hello_world=0x7f050002;
+        public static final int drawer_close=0x7f050003;
+        public static final int drawer_open=0x7f050002;
     }
     public static final class style {
         /** 

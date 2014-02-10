@@ -11,7 +11,7 @@ public class RegisterActivity extends Activity
     public void onCreate(Bundle savedInstanceState) 
     {
         super.onCreate(savedInstanceState);
-        // Set View to register.xml
+        // Set View to register.xml; runs the register layout.
         setContentView(R.layout.register);
  
         TextView loginScreen = (TextView) findViewById(R.id.link_to_login);

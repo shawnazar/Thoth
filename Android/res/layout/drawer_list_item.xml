@@ -9,11 +9,10 @@
         android:layout_width="25dp"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
         android:layout_marginLeft="12dp"
         android:layout_marginRight="12dp"
-        android:contentDescription="@string/desc_list_item_icon"
-        android:src="@drawable/ic_home"
-        android:layout_centerVertical="true" />
+        android:src="@drawable/ic_action_user" />
  
     <TextView
         android:id="@+id/title"
@@ -33,6 +32,6 @@
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:layout_marginRight="8dp"
-        android:textColor="#ffffff"/>
+        android:textColor="#9e0b0f"/>
  
 </RelativeLayout>
