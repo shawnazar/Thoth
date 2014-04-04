@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Welcome to The Thoth Project</string>
+    <string name="app_name">Project Thoth</string>
+    <string name="button_text">Press Here To OCR</string>
+    <string name="text_hint">Text will appear here</string>
+
+</resources>
